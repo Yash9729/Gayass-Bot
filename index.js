@@ -1,8 +1,6 @@
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
 
-bot.login(Process.env.token)
-
 const PREFIX = '!';
 
 var Version = '1.0.1';
@@ -20,7 +18,7 @@ bot.on('message', message=>{
             message.channel.send('Pong!')
             break;   
         case 'website':
-            message.channel.send('https://www.youtube.com/channel/UCVpJX0oNOzVebxJepPcBffA?view_as=subscriber')
+            message.channel.send('I Don't have')
             break;
         case 'info':
             if(args[1] === 'version'){
@@ -44,5 +42,5 @@ bot.on('message', message=>{
 
 })
 
-bot.login(token);
+bot.login(process.env.token);
 
